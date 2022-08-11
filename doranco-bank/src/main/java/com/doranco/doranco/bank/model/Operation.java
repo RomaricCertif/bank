@@ -18,7 +18,7 @@ import javax.persistence.TemporalType;
 @Entity
 @Table(name = "T_OPERATION")
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Operation extends AbstractEntity implements Serializable{
+public  class Operation extends AbstractEntity implements Serializable{
 
 	@Id
 	@Column(name = "OPERATION_ID")
