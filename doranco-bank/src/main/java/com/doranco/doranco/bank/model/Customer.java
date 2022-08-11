@@ -18,7 +18,7 @@ import javax.persistence.Table;
 @Table(name = "T_CUSTOMER")
 @Inheritance (strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "CUSTOMER_TYPE",discriminatorType = DiscriminatorType.STRING)
-public abstract class Customer implements Serializable{
+public abstract class Customer extends AbstractEntity implements Serializable{
 
 	@Id
 	@Column(name = "CUSTOMER_CD")

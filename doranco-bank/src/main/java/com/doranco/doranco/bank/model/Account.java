@@ -17,7 +17,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "T_ACCOUNT")
-public class Account implements Serializable {
+public class Account  extends AbstractEntity implements Serializable {
 	
 	@Id
 	@Column(name = "ACCOUNT_ID")

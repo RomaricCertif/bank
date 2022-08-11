@@ -3,7 +3,6 @@ package com.doranco.doranco.bank.model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,7 +18,7 @@ import javax.persistence.TemporalType;
 @Entity
 @Table(name = "T_OPERATION")
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Operation implements Serializable{
+public abstract class Operation extends AbstractEntity implements Serializable{
 
 	@Id
 	@Column(name = "OPERATION_ID")
