@@ -8,6 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
@@ -31,7 +32,7 @@ public  class Customer extends AbstractEntity implements Serializable{
 	@Column(name = "EMAIL")
 	private String email;
 	
-	@OneToMany(mappedBy = "customer")
+	@OneToMany(mappedBy = "customer",fetch = FetchType.EAGER)
 	private List<Account> accounts=new ArrayList<>();
 	
 	public Customer() {

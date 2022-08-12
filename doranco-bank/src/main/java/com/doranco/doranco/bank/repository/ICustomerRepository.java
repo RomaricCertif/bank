@@ -8,4 +8,5 @@ import com.doranco.doranco.bank.model.Customer;
 @Repository
 public interface ICustomerRepository extends JpaRepository<Customer, String>{
 
+	
 }

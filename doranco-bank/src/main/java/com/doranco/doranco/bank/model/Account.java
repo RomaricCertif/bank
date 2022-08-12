@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -30,7 +31,7 @@ public class Account  extends AbstractEntity implements Serializable {
 	@Column(name = "AMOUNT")
 	private BigDecimal amount =new BigDecimal(0);
 	
-	@ManyToOne
+	@ManyToOne 
 	@JoinColumn(name = "CUSTOMER_CD")
 	private Customer customer;
 	
