@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.doranco.doranco.bank.exceptions.DorancoException;
 import com.doranco.doranco.bank.model.Account;
 import com.doranco.doranco.bank.model.Operation;
 import com.doranco.doranco.bank.model.Particulier;
@@ -24,7 +25,7 @@ public class OperationAPI {
 	
 	
 	@PostMapping("/depot")
-	public ResponseEntity<Operation> save (@RequestBody Operation operation) {
+	public ResponseEntity<Operation> save (@RequestBody Operation operation) throws DorancoException {
 		operationService.depot(operation);
 		return new ResponseEntity<Operation>(operation,HttpStatus.OK);
 	}

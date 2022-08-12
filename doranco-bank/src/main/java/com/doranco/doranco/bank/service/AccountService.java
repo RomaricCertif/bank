@@ -14,6 +14,7 @@ import com.doranco.doranco.bank.repository.ICustomerRepository;
 
 @Service
 @Transactional
+
 public class AccountService {
 	
 	@Autowired

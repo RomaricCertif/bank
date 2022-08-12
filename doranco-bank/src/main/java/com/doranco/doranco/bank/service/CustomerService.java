@@ -2,16 +2,18 @@ package com.doranco.doranco.bank.service;
 
 import java.util.Optional;
 
-import javax.transaction.Transactional;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.doranco.doranco.bank.exceptions.DorancoException;
 import com.doranco.doranco.bank.model.Customer;
 import com.doranco.doranco.bank.model.Particulier;
 import com.doranco.doranco.bank.repository.ICustomerRepository;
 
-@Transactional
+@Transactional(rollbackFor = DorancoException.class)
 @Service
 public class CustomerService {
 
